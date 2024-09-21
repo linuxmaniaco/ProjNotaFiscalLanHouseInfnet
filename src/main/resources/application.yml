@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: nota-fiscal-lanHouse
+  rabbitmq:
+    listener:
+      simple:
+        retry:
+          enabled: true
+          max-attempts: 4
+          initial-interval: 5000
+          multiplier: 3.0
+          max-interval: 15000
+
+app:
+  myport: ${PORT:0}
+server:
+  port: ${app.myport}
+
