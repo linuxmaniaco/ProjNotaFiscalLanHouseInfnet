@@ -10,4 +10,5 @@ import lombok.*;
 public class NotaFiscal {
     private Long id;
     private String pedidoId;
+    private String status;
 }
